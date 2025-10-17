@@ -27,7 +27,7 @@ padding: 0;
 
 .intro {
 
-background-image: url("/images/violet-start.jpg");
+background-image: url("images/violet-start.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 height: 100vh;
