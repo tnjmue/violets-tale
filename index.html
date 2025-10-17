@@ -13,36 +13,27 @@
 </head>
 <body>
     <main>
-        <!-- intro screen with start button -->
+        
         <div id="intro" class="intro hidden">
           <h1>ViOLeT's TaLe</h1>
           <div class="bat"></div>
           <button class="game-btn" id="start">start game</button>
         </div>
-            
-
-
 
         <div id="story-view" class="story-view hidden">
           <h1 id="story-header">Violet's Tale</h1>
             <div id="buttons">
               <button class="game-btn" id="next">next page</button>
-              <button class="game-btn" id="kill">kill me</button>
-              <button class="game-btn restart">back to intro</button>
+              <button class="game-btn hidden" id="kill">kill me</button>
+              <button class="game-btn restart hidden">back to intro</button>
             </div>
-
-          <div id="container"></div>
-
-          
+          <div id="container"></div>          
         </div>
 
         <div id="you-died" class="you-died hidden">
           <h1>YoU DiED</h1>
-          <button class="game-btn restart">back to start</button>
-          
+          <button class="game-btn restart">back to start</button>  
         </div>
-
-        <!-- <div id="ending" class="hidden"></div> -->
 
     </main>
     <script src="js/story.js"></script>

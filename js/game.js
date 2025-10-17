@@ -13,6 +13,11 @@ class Game {
 
     }
 
+    restartGame() {
+        this.currentIndex = 0;
+        this.displayStory();  // 🟢 redraw first story segment
+    }
+
     updateIndex() {
         this.currentIndex++;
         this.displayStory();
@@ -31,6 +36,8 @@ class Game {
         document.getElementById("story-header").className = `${currentSegment.sin}-theme`;
         container.className = currentSegment.sin
         container.innerHTML = `<article>${currentSegment.text}</article></div>`;
+
+        
         
 
         if (currentSegment.choices) {
@@ -68,8 +75,9 @@ class Game {
 
         }
 
-        // arrow for intro segments
-        if (!currentSegment.choices && currentSegment.value == null) {
+
+        // arrow button
+        if ((currentSegment.type) === "intro" || (currentSegment.type === "outro")) {
             const arrowBtn = document.createElement("button");
             arrowBtn.className = "game-btn";
             arrowBtn.id = "arrow";
@@ -82,38 +90,34 @@ class Game {
 
             container.appendChild(arrowBtn);
         
-        // arrow for outro segments
-        } else if (currentSegment.type === "outro") {
-            const arrowBtn = document.createElement("button");
-            arrowBtn.className = "game-btn";
-            arrowBtn.id = "arrow";
-            arrowBtn.textContent = "→";
-
-            if (currentSegment.value === true) {
-                 arrowBtn.addEventListener("click", () => {
-                    this.currentIndex++;   
-                    this.displayStory();   
-                });
-
-            } else {
-            arrowBtn.addEventListener("click", () => {
-                document.getElementById("intro").classList.add('hidden');
-                document.getElementById("story-view").classList.add('hidden');
-                document.getElementById("you-died").classList.remove('hidden');    
-                });
-            }
-            container.appendChild(arrowBtn);
-        
         } 
 
-            /* const restartBtn = document-querySelector("#buttons . restart");
-            if (currentSegment.sin === "ending") {
-                restartBtn.classList.remove("hidden");
-            } */
-        
-        
+             if (currentSegment.title === 'finished') {
+               const backBtn = document.createElement("button");
+                backBtn.className = "game-btn restart";
+                backBtn.id = "start-again";
+                backBtn.textContent = "restart game";
+                backBtn.addEventListener("click", () => {
+                document.getElementById("you-died").classList.add('hidden');
+                document.getElementById("story-view").classList.add('hidden');
+                document.getElementById("intro").classList.remove('hidden');   
+                });
+
+                container.appendChild(backBtn);
+             }
+
         
     }
+
+    typeText(element, text, speed = 25) {
+  element.textContent = "";
+  let i = 0;
+  const timer = setInterval(() => {
+    element.textContent += text[i];
+    i++;
+    if (i >= text.length) clearInterval(timer);
+  }, speed);
+}
 
 }
 

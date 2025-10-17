@@ -2,8 +2,8 @@
   --dark-grey: rgb(86, 86, 86);
   --light-grey: rgb(169, 179, 184);
   --blood-red: #6d0505;
-  --darker-red: rgb(79, 18, 18); 
-  --light-violet: rgb(160, 131, 204);
+  --darker-red: rgb(79, 18, 18); /* #4F1212 */
+  --light-violet: rgb(160, 131, 204); /* #A083CC */
   --dark-violet: rgb(35, 17, 67);
   --dark-brown: #221917;
   --dark-blue: #0c1b40;
@@ -42,7 +42,7 @@ font-family: "Frijole", system-ui;
 font-weight: 100;
 font-style: normal;
 color: rgb(160, 131, 204);
-font-size: 4rem;
+font-size: 6rem;
 padding-top: 4rem;
 }
 
@@ -133,7 +133,7 @@ padding: 0;
   /* base styles */
 background-color: var(--dark-grey);
 color: white;
-font-family: Book Antiqua;
+font-family: 'Lucida Console';
 font-size: 1.5rem;
 font-weight: 400;
 padding: 0.5rem 1.5rem;
@@ -180,6 +180,7 @@ background-color:rgb(24, 15, 11);
 height: 100vh;
 justify-content: center; 
 align-items: center;
+font-family: 'Lucida Console';
 }
 
 
@@ -193,6 +194,33 @@ text-align:center;
 padding-top: 2rem;
 }
 
+.story-view article {
+  white-space: pre-wrap;
+}
+
+#confirm-choice {
+margin-top: 2rem;
+}
+
+#arrow {
+margin-top: 4rem;
+}
+
+@keyframes typeIn {
+  0% { opacity: 0; transform: translateY(0.5em); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+#container article, 
+#container .choices {
+  opacity: 0;
+  animation: typeIn 0.8s ease forwards;
+}
+
+/* Optional: stagger delay for .choices */
+#container .choices {
+  animation-delay: 0.8s;
+}
 
 #buttons {
   padding-top: 3rem;
@@ -210,8 +238,6 @@ height: 35%;
 width: 50%;
 margin: auto;
 padding: 6rem;
-/* background: var(--dark-violet);
-color: var(--warm-yellow); */
 }
 
 
@@ -303,12 +329,8 @@ color: var(--warm-yellow);
 color: var(--warm-yellow);
 }
 
-.ending button {
-display: none !important;
-}
-
-.ending .restart {
-display: block !important;
+#start-again {
+margin-top: 5rem;
 }
 
 .you-died {
