@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     startBtn.addEventListener("click", () => {
         showSections(story);
-        game.restartGame();   // 🟢 reset to beginning
+        game.restartGame();   // reset to first page
         
     });
 
@@ -39,15 +39,4 @@ document.addEventListener("DOMContentLoaded", () => {
    
     showSections(intro);
     
-
-   /*  const newGame = new Game(storySegments)
-
-    if (!game) {
-    game = new Game(story);
-    } else {
-    game.restartGame();
-    game.displayStory();
-    } */
-
-
 });

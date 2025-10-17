@@ -16,7 +16,7 @@ class Game {
 
     restartGame() {
         this.currentIndex = 0;
-        this.displayStory();  // 🟢 redraw first story segment
+        this.displayStory();  // redraw first story segment
     }
 
     updateIndex() {
