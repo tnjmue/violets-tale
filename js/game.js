@@ -8,6 +8,7 @@ class Game {
         this.nextBtn = document.getElementById("next");
         this.nextBtn.addEventListener("click", () => this.updateIndex(story));
         this.displayStory();
+        this.deathScreen = document.getElementById("you-died");
         
 
 
@@ -76,23 +77,45 @@ class Game {
         }
 
 
-        // arrow button
-        if ((currentSegment.type) === "intro" || (currentSegment.type === "outro")) {
+        // arrow for intro segments
+        if (currentSegment.type === "intro"){
             const arrowBtn = document.createElement("button");
             arrowBtn.className = "game-btn";
             arrowBtn.id = "arrow";
             arrowBtn.textContent = "→";
-        
+
             arrowBtn.addEventListener("click", () => {
                 this.currentIndex++;
                 this.displayStory(); 
             });
 
             container.appendChild(arrowBtn);
-        
-        } 
 
-             if (currentSegment.title === 'finished') {
+        // arrow for outro segments
+        } else if (currentSegment.type === "outro" && currentSegment.title !== 'finished') {
+            const arrowBtn = document.createElement("button");
+            arrowBtn.className = "game-btn";
+            arrowBtn.id = "arrow";
+            arrowBtn.textContent = "→";
+
+            if (currentSegment.value === true) {
+                 arrowBtn.addEventListener("click", () => {
+                    this.currentIndex++;
+                    this.displayStory();
+                });
+
+            } else {
+            arrowBtn.addEventListener("click", () => {
+                document.getElementById("intro").classList.add('hidden');
+                document.getElementById("story-view").classList.add('hidden');
+                document.getElementById("you-died").classList.remove('hidden');
+                });
+            }
+            container.appendChild(arrowBtn);
+
+        }
+
+        if (currentSegment.title === 'finished') {
                const backBtn = document.createElement("button");
                 backBtn.className = "game-btn restart";
                 backBtn.id = "start-again";
@@ -100,7 +123,7 @@ class Game {
                 backBtn.addEventListener("click", () => {
                 document.getElementById("you-died").classList.add('hidden');
                 document.getElementById("story-view").classList.add('hidden');
-                document.getElementById("intro").classList.remove('hidden');   
+                document.getElementById("intro").classList.remove('hidden');
                 });
 
                 container.appendChild(backBtn);

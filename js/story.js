@@ -126,14 +126,16 @@ const storySegments = [
     {
         title: "Envy intro",
         type: "intro",
-        text: "Segment 10",
+        text: `The pink glow of the crystals fades and turns into a warm yellow emanating from an actual lantern. A lantern! I look around and find more things that look like they were made by humans: a rusty shovel leaning against the wall to my right, what looks to be a crumpled up leather backpack behind a small pile of rocks, a sheet of plastic of all things and a pair of broken glasses. I deem all of it potentially useful, except the glasses, so I chuck them away carelessly and they land in the stream where, to my surprise, they float. And not only do they not sink, they reflect back the yellow light of the lantern in a strange way, casting a screen of sorts on the wall opposite to me. I blink, then rub my eyes. Twice. Just when I’d thought I’d found a relatively normal place in this whole head trip of a situation.`,
         sin: "envy",
         image: "url('/images/cave-entrance.jpg')"
     },
     {
         title: "Envy event",
         type: "event",
-        text: "Segment 11",
+        text: `To my surprise, I hear them before I see them: People. Talking, laughing. I jump to my feet and look around frantically, stupidly hoping and fearing that someone, anyone might be here but it’s just me. so I turn my gaze back onto the glasses, the weird screen they’re casting and I start seeing people walking. People walking down the street, walking their dogs, crossing crosswalks, it’s ridiculous. I see them stopping by a bakery, getting a sandwich, cup of coffee in hand. I’m so taken aback by this I forget to breathe for a minute or two and only notice myself filling up with a longing so strong it burns.  Their laughter, their hushed conversations, they’re noise in my ears. I need it all to stop. I snap back to my senses and do the only reasonable thing: I take the glasses out of the stream. The screen vanishes instantly and the sounds die with it. I stare at the glasses in my hands and they look so ordinary. But I just witnessed them reflecting a light source and magnifying it by a lot - they might come in handy. But I don’t want them. I don’t want to be reminded of what I cannot have. If I’m stuck here, if I’ll never make it out, I’d rather forget my old life.
+        `,
+
         choices: ["take glasses", "leave glasses"],
         validChoice: 0,
         sin: "envy",
@@ -142,7 +144,13 @@ const storySegments = [
     {
         title: "Eny outro - wrong",
         type: "outro",
-        text: `I guess I could just leave them here. No angry outbursts, no holding on. Just walk away, let go of the pain. I put them on the floor next to me, get up and grab my backpack. As I turn around and start walking, I feel okay. Just another episode, but I’m walking away. I make my way deeper into the cave, the warm light of the lantern fading behind me. So it really is back into the darkness, huh? Fine by me. Everything gets colder, like, the temperature but also the colors. Warm blue turns into dark violet, but I start seeing bright turquoise splotches scattered around the floor, too. I roll my eyes. What below earth could it be this time? Glowing rock crabs? Spiders? An insect of some sort! Come on, we haven’t had poison yet. The world suddenly starts to spin. I lose my footing and fall headfirst into one of the glowing things. A moist warm cushion that immediately suffocates me. The last thing I see is a glowing, bright turquoise. Then everything goes white. `, 
+        text: `I guess I could just leave them here. Just walk away, let go of the pain. I drop them, and then I make my way deeper into the cave, the warm light of the lantern fading behind me. Everything gets colder, like, the temperature but also the colors. Warm blue turns into dark violet, but I start seeing bright turquoise splotches scattered around the floor, too. I roll my eyes. What below earth could it be this time? Glowing rock crabs? Spiders? Come on, we haven’t had poison yet. The world suddenly starts to spin. I lose my footing and fall headfirst into one of the glowing things. A moist warm cushion that immediately suffocates me. The last thing I see is a glowing, bright turquoise. Then everything goes white.
+        
+        I watched them having everything
+        envy won’t let me go
+        And then I couldn’t see a thing
+        Got blinded by the glow
+        `, 
         value: false, // -> you died
         sin: "envy",
         image: "url('/images/cave-entrance.jpg')"
@@ -150,7 +158,7 @@ const storySegments = [
     {
         title: "Eny outro - right",
         type: "outro",
-        text: `Practicality wins. Can’t say I make this call often, but I do try. I stuff the glasses in the front pocket of my backpack and get going. I feel better, having chosen reason. Whatever that means here. I make my way deeper into the cave, the warm light of the lantern fading behind me. So it really is back into the darkness, huh? Fine by me. Everything gets colder, like, the temperature but also the colors. Warm blue turns into dark violet, but I start seeing bright turquoise splotches scattered around the floor, too. I roll my eyes. What below earth could it be this time? Glowing rock crabs? Spiders? An insect of some sort! Come on, we haven’t had poison yet. Everything suddenly starts to spin. I collapse against the wall, the world blurs before my eyes. In a desperate attempt, I tear the glasses out of my backpack and slam them onto my nose. The spinning stops instantly. I can see again. I can keep going.`, 
+        text: `Practicality wins. Can’t say I make this call often, but I do try. I stuff the glasses in the front pocket of my backpack and get going. I make my way deeper into the cave, the warm light of the lantern fading behind me. Everything gets colder, like, the temperature but also the colors. Warm blue turns into dark violet, but I start seeing bright turquoise splotches scattered around the floor, too. I roll my eyes. What below earth could it be this time? Glowing rock crabs? Spiders? Come on, we haven’t had poison yet. Everything suddenly starts to spin. I collapse against the wall, the world blurs before my eyes. In a desperate attempt, I tear the glasses out of my backpack and slam them onto my nose. The spinning stops instantly. I can see again. I can keep going.`, 
         value: true, // -> next sin
         sin: "envy",
         image: "url('/images/cave-entrance.jpg')"
@@ -158,16 +166,16 @@ const storySegments = [
      {
         title: "Greed intro",
         type: "intro",
-        text: `It’s mushrooms. GLOWING MUSHROOMS. AGAIN. Right. Of course. But they do look poisonous, so half points? There’s slime of the same colour dripping from the ceiling and the water in my stream is now murky and opaque and also faintly glowing. So much for drinking from that again. It all looks kind of cool, really. If you can bypass the fact that I’m lost and stuck here and all that. The air is moist and heavy though and smells a little too sweet. I think I should get out of here as quickly as possible. I look around. Ahead of me, there’s a gaping whole in the cave wall where everything is much darker and the slime dripping from the ceiling is now purple. I could go in there. I could gather a few of these glowing mushrooms, use them as a torch as I did the first one and continue to go deeper. To my left, there’s a door with glowy carvings and symbols. Where the part of the cave before looked like a way station of your regular lost traveller passing through, this part looks like an evil magician’s lair: definitely bad news, definitely shouldn’t be here. But in my opinion, it goes with the whole experience better. At least it doesn’t lie to me the same way the other cave did, telling me I’m not alone. `,
+        text: `It’s glowing mushrooms. There’s slime of the same colour dripping from the ceiling. The air is moist and heavy though and smells a little too sweet. I think I should get out of here as quickly as possible. I look around. To my left, there’s a door with glowy carvings and symbols. Where the part of the cave before looked like a way station of your regular lost traveller passing through, this part looks like an evil magician’s lair: definitely bad news, definitely shouldn’t be here. I decide to inspect the door more closely. Trying to push it open is pointless – either it’s too heavy for me or it requires some sort of key. Since the four symbols around it glow in the same hue as the mushrooms do, I figure they’re connected in some way. Maybe you need to power the door up with the mushrooms or something. Or the slime.`,
         sin: "greed",
         image: "url('/images/mushroom-cave.gif')"
     },
     {
         title: "Greed event",
         type: "event",
-        text: `I decide to inspect the door more closely. Trying to push it open is pointless – either it’s too heavy for me or it requires some sort of key. Since the four symbols around it glow in the same hue as the mushrooms do, I figure those are worth inspecting, too. Maybe you need to power the door up with the mushrooms or something. Or the slime. Honestly, I know I should be afraid. This is the spookiest place I’ve been in so far, there is nothing remotely normal about this and already, I can feel my head starting to spin and my breaths becoming more shallow. But I just don’t seem to mind. Instead, I keep wishing I’d brought my phone because I really want to take pictures of the whole scene. Maybe I’m just past caring at this point. Maybe I’ve gone insane. Not entirely probably, because as I go to gather some mushrooms, I remember my plastic and take it out. Better not let these things touch my bare skin. 
+        text:`I know I should be afraid. This is the spookiest place I’ve been in so far, there is nothing remotely normal about this and already, I can feel my head starting to spin and my breaths becoming more shallow. But I just don’t seem to mind. Maybe I’ve gone insane. Not entirely probably, because as I go to gather some mushrooms, I remember my plastic and take it out. Better not let these things touch my bare skin. I pick the four biggest ones I can find and press one to each carved symbol. They get sucked in, the circle in the middle of the door starts spinning, everything glows and the door bursts open. It reveals a dark narrow corridor. I’m wondering if I should pick some more magic mushrooms before I leave? They could come in handy.
         
-        `,
+        `,  
         choices: ["take mushrooms", "leave mushrooms"],
         validChoice: 1,
         sin: "greed",
@@ -176,7 +184,8 @@ const storySegments = [
     {
         title: "Greed outro - wrong",
         type: "outro",
-        text: `
+        text: `I quickly collect some more mushrooms and stuff them in my backpack. I can’t move at normal speed anymore, Coughing, I drag myself to the dark corridor. I notice rashes on my skin that are spreading rapidly. I spent too much time in that poison cave. Blood is seeping from the wounds in my skin. I collapse.
+        
         Never take more than you need
         It plants an evil seed
         That all of your desires feed
@@ -191,7 +200,7 @@ const storySegments = [
      {
         title: "Greed outro - right",
         type: "outro",
-        text: "Segment 15", 
+        text: `I should just get out of here. I step into the dark corridor. I can notice the effects of the poison still. I can see rashes on my arms, but they recede the further I walk away from the cave. It was the most beautiful place I’ve ever seen, but definitely not somewhere I’d like to ever return to.`, 
         value: true, // -> next sin
         sin: "greed",
         image: "url('/images/mushroom-cave.gif')"
@@ -217,18 +226,15 @@ const storySegments = [
       {
         title: "Wrath outro - wrong",
         type: "outro",
-        text: `If I strike first, he won’t get to. I don’t want to be here with him anymore and none of this is fair. So I take the shovel out of my backpack, I carefully position it over his neck. If he has any idea I’m here, he gives of no clue. He may as well be dead already. I slash down at his throat with the rim of the shovel, expecting it to cut through and make some sort of cut. But it doesn’t. It does almost nothing, except that his moaning intensifies. So I hit him again and again and again. I hand myself over to my anger, my eyes half-closed and I’m half yelling until all of a sudden, I feel a blistered hand around my own neck. I look down in a trance and find myself locked by the gaze of two ugly yellow eyes. He opens his crooked gap of a mouth and whispers in a coarse voice:
+        text: `If I strike first, he won’t get to. So I take the shovel out of my backpack, I carefully position it over his neck. I slash down at his throat with the rim of the shovel, expecting it to make some sort of cut. But it doesn’t. It does almost nothing, except that his moaning intensifies. So I hit him again and again and again. I hand myself over to my anger, my eyes half-closed and I’m half yelling until all of a sudden, I feel a hand around my own neck. I look down in a trance and find myself locked by the gaze of two ugly big yellow eyes. He opens his crooked gap of a mouth and whispers in a coarse voice:
         
         Violet, Violet, why so violent
         Violence gets what violence does
-        I lay sleeping, you bring riot
-        Want to hurt me for the buzz
         My own violence long fell silent
         My appetite long gone because
         Can’t you see I’m already dying
         How pointless all your anger was
-        What a shame you can’t see the path
-        still haven’t figured out the math
+        Pity you still can’t see the path
         now you’ll die from your own wrath
         `,
         value: false, // -> you died
