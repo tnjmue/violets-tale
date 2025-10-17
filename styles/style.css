@@ -335,7 +335,7 @@ margin-top: 5rem;
 
 .you-died {
 
-background-image: url("/images/you-died-blood.gif");
+background-image: url("images/you-died-blood.gif");
 background-size:cover;
 background-repeat: no-repeat;
 display: flex;
